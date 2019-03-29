@@ -1,0 +1,73 @@
+body{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.container{
+    max-width: 30rem;
+    margin: 2rem auto;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    background: rgb(217, 217, 219);
+    box-sizing: border-box;
+}
+
+.feed{
+    padding: 1rem;
+    display: flex;
+}
+
+.text h3{
+    letter-spacing: 0.3rem;
+}
+
+.text, .avatar{
+    padding: 0.5rem;
+}
+
+
+.avatar img{
+    max-width: 5rem;
+}
+
+#comment-input , #send-btn {
+    margin: 0.5rem;
+}
+
+#comment-input{
+    min-width: 70%;
+    padding: 0.5rem;
+    border-radius: 7px;
+    border: none;
+}
+
+#send-btn{
+    border: none;
+    background: transparent;
+    color: white;
+    letter-spacing: 0.3rem;
+    font-weight: 700;
+    text-shadow: 0 2px 3px grey;
+    font-size: 18px;
+}
+
+#send-btn:hover{
+    cursor: pointer;
+    text-shadow: 0 3px 4px rgb(77, 76, 76);
+}
+
+.like:hover{
+    animation: change-color;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    color:darkblue;
+    cursor: pointer;
+}
+
+#send-btn:focus{
+    outline: none;
+}
+
+@keyframes change-color {
+    from {color: rgb(198, 204, 255);}
+    to {color: rgb(75, 93, 255);}
+  }
