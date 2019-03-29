@@ -107,13 +107,14 @@ const createComment = text => {
 
 // Handler for the send button - new comment
 const sendHandler = () => {
-    const inputText = document.getElementById(bodyElements.input).value;
-    if (isEmpty(inputText)) {
+    const inputText = document.getElementById(bodyElements.input);
+    if (isEmpty(inputText.value)) {
         alert(emptyInputMsg);
         return;
     }
 
-    const comment = createComment(inputText);
+    const comment = createComment(inputText.value);
     document.getElementById(bodyElements.main).appendChild(comment);
+    inputText.value = '';
 
 }
